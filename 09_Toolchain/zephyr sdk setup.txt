@@ -1,0 +1,24 @@
+Zephyr SDK 0.16.0 Setup
+
+** NOTE **
+You only need to run this script once after extracting the Zephyr SDK
+distribution bundle archive.
+
+Install host tools [Y,N]?Y
+Register Zephyr SDK CMake package [Y,N]?Y
+
+Installing host tools ...
+SKIPPED: Windows host tools are not available yet.
+
+Registering Zephyr SDK CMake package ...
+Zephyr-sdk (D:/nFR/zephyr-sdk-0.16.0/cmake)
+has been added to the user package registry in:
+HKEY_CURRENT_USER\Software\Kitware\CMake\Packages\Zephyr-sdk
+
+
+All done.
+
+Press any key to exit ...
+
+
+run setup.cmd !!!

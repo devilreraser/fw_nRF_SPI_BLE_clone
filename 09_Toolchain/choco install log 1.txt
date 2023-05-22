@@ -1,0 +1,408 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+                                                                                                                        Try the new cross-platform PowerShell https://aka.ms/pscore6                                                                                                                                                                                    PS C:\WINDOWS\system32> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))                                                                     Forcing web requests to allow TLS v1.2 (Required for requests to Chocolatey.org)
+Getting latest version of the Chocolatey package for download.
+Not using proxy.
+Getting Chocolatey from https://community.chocolatey.org/api/v2/package/chocolatey/1.4.0.
+Downloading https://community.chocolatey.org/api/v2/package/chocolatey/1.4.0 to C:\Users\Mito\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip
+Not using proxy.
+Extracting C:\Users\Mito\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip to C:\Users\Mito\AppData\Local\Temp\chocolatey\chocoInstall
+Installing Chocolatey on the local machine
+Creating ChocolateyInstall as an environment variable (targeting 'Machine')
+  Setting ChocolateyInstall to 'C:\ProgramData\chocolatey'
+WARNING: It's very likely you will need to close and reopen your shell
+  before you can use choco.
+Restricting write permissions to Administrators
+We are setting up the Chocolatey package repository.
+The packages themselves go to 'C:\ProgramData\chocolatey\lib'
+  (i.e. C:\ProgramData\chocolatey\lib\yourPackageName).
+A shim file for the command line goes to 'C:\ProgramData\chocolatey\bin'
+  and points to an executable in 'C:\ProgramData\chocolatey\lib\yourPackageName'.
+
+Creating Chocolatey folders if they do not already exist.
+
+WARNING: You can safely ignore errors related to missing log files when
+  upgrading from a version of Chocolatey less than 0.9.9.
+  'Batch file could not be found' is also safe to ignore.
+  'The system cannot find the file specified' - also safe.
+chocolatey.nupkg file not installed in lib.
+ Attempting to locate it from bootstrapper.
+PATH environment variable does not have C:\ProgramData\chocolatey\bin in it. Adding...
+WARNING: Not setting tab completion: Profile file does not exist at
+'C:\Users\Mito\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1'.
+Chocolatey (choco.exe) is now ready.
+You can call choco from anywhere, command line or powershell by typing choco.
+Run choco /? for a list of functions.
+You may need to shut down and restart powershell and/or consoles
+ first prior to using choco.
+Ensuring Chocolatey commands are on the path
+Ensuring chocolatey.nupkg is in the lib folder
+PS C:\WINDOWS\system32> choco feature enable -n allowGlobalConfirmation
+Chocolatey v1.4.0
+Enabled allowGlobalConfirmation
+PS C:\WINDOWS\system32> choco list -lo
+Chocolatey v1.4.0
+chocolatey 1.4.0
+1 packages installed.
+PS C:\WINDOWS\system32> choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
+Chocolatey v1.4.0
+Installing the following packages:
+cmake
+By installing, you accept licenses for the packages.
+Progress: Downloading cmake.install 3.26.4... 100%
+Progress: Downloading cmake 3.26.4... 100%
+
+cmake.install v3.26.4 [Approved]
+cmake.install package files install completed. Performing other installation steps.
+Installing 64-bit cmake.install...
+cmake.install has been installed.
+  cmake.install may be able to be automatically uninstalled.
+Environment Vars (like PATH) have changed. Close/reopen your shell to
+ see the changes (or in powershell/cmd.exe just type `refreshenv`).
+ The install of cmake.install was successful.
+  Software installed to 'C:\Program Files\CMake\'
+
+cmake v3.26.4 [Approved]
+cmake package files install completed. Performing other installation steps.
+ The install of cmake was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\cmake'
+
+Chocolatey installed 2/2 packages.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+PS C:\WINDOWS\system32> choco install ninja gperf python git dtc-msys2 wget 7zip
+Chocolatey v1.4.0
+Installing the following packages:
+ninja;gperf;python;git;dtc-msys2;wget;7zip
+By installing, you accept licenses for the packages.
+Progress: Downloading ninja 1.11.1... 100%
+
+ninja v1.11.1 [Approved]
+ninja package files install completed. Performing other installation steps.
+Extracting C:\ProgramData\chocolatey\lib\ninja\tools\ninja-win_x32.zip to C:\ProgramData\chocolatey\lib\ninja\tools...
+C:\ProgramData\chocolatey\lib\ninja\tools
+Installed to: 'C:\ProgramData\chocolatey\lib\ninja\tools'
+ ShimGen has successfully created a shim for ninja.exe
+ The install of ninja was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\ninja\tools'
+Progress: Downloading gperf 3.1... 100%
+
+gperf v3.1 [Approved]
+gperf package files install completed. Performing other installation steps.
+Getting x64 bit zip
+Extracting C:\ProgramData\chocolatey\lib\gperf\tools\gperf-3.1-win64_x64.zip to C:\ProgramData\chocolatey\lib\gperf\tools...
+C:\ProgramData\chocolatey\lib\gperf\tools
+ ShimGen has successfully created a shim for gperf.exe
+ The install of gperf was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\gperf\tools'
+Progress: Downloading python3 3.11.3... 100%
+Progress: Downloading python311 3.11.3... 100%
+Progress: Downloading vcredist2015 14.0.24215.20170201... 100%
+Progress: Downloading vcredist140 14.36.32532... 100%
+Progress: Downloading chocolatey-core.extension 1.4.0... 100%
+Progress: Downloading chocolatey-compatibility.extension 1.0.0... 100%
+Progress: Downloading KB3033929 1.0.5... 100%
+Progress: Downloading chocolatey-windowsupdate.extension 1.0.5... 100%
+Progress: Downloading KB3035131 1.0.3... 100%
+Progress: Downloading KB2919355 1.0.20160915... 100%
+Progress: Downloading KB2919442 1.0.20160915... 100%
+Progress: Downloading KB2999226 1.0.20181019... 100%
+Progress: Downloading python 3.11.3... 100%
+
+chocolatey-compatibility.extension v1.0.0 [Approved]
+chocolatey-compatibility.extension package files install completed. Performing other installation steps.
+ Installed/updated chocolatey-compatibility extensions.
+ The install of chocolatey-compatibility.extension was successful.
+  Software installed to 'C:\ProgramData\chocolatey\extensions\chocolatey-compatibility'
+
+chocolatey-core.extension v1.4.0 [Approved]
+chocolatey-core.extension package files install completed. Performing other installation steps.
+ Installed/updated chocolatey-core extensions.
+ The install of chocolatey-core.extension was successful.
+  Software installed to 'C:\ProgramData\chocolatey\extensions\chocolatey-core'
+
+chocolatey-windowsupdate.extension v1.0.5 [Approved]
+chocolatey-windowsupdate.extension package files install completed. Performing other installation steps.
+ Installed/updated chocolatey-windowsupdate extensions.
+ The install of chocolatey-windowsupdate.extension was successful.
+  Software installed to 'C:\ProgramData\chocolatey\extensions\chocolatey-windowsupdate'
+
+KB3035131 v1.0.3 [Approved]
+kb3035131 package files install completed. Performing other installation steps.
+Skipping installation because update KB3035131 does not apply to this operating system (Microsoft Windows 10 Pro).
+ The install of kb3035131 was successful.
+  Software install location not explicitly set, it could be in package or
+  default install location of installer.
+
+KB3033929 v1.0.5 [Approved]
+kb3033929 package files install completed. Performing other installation steps.
+Skipping installation because update KB3033929 does not apply to this operating system (Microsoft Windows 10 Pro).
+ The install of kb3033929 was successful.
+  Software install location not explicitly set, it could be in package or
+  default install location of installer.
+
+KB2919442 v1.0.20160915 [Approved]
+kb2919442 package files install completed. Performing other installation steps.
+Skipping installation because this hotfix only applies to Windows 8.1 and Windows Server 2012 R2.
+ The install of kb2919442 was successful.
+  Software install location not explicitly set, it could be in package or
+  default install location of installer.
+
+KB2919355 v1.0.20160915 [Approved]
+kb2919355 package files install completed. Performing other installation steps.
+Skipping installation because this hotfix only applies to Windows 8.1 and Windows Server 2012 R2.
+ The install of kb2919355 was successful.
+  Software install location not explicitly set, it could be in package or
+  default install location of installer.
+
+KB2999226 v1.0.20181019 [Approved] - Possibly broken
+kb2999226 package files install completed. Performing other installation steps.
+Skipping installation because update KB2999226 does not apply to this operating system (Microsoft Windows 10 Pro).
+ The install of kb2999226 was successful.
+  Software install location not explicitly set, it could be in package or
+  default install location of installer.
+
+vcredist140 v14.36.32532 [Approved]
+vcredist140 package files install completed. Performing other installation steps.
+Downloading vcredist140-x86
+  from 'https://download.visualstudio.microsoft.com/download/pr/eaab1f82-787d-4fd7-8c73-f782341a0c63/5365A927487945ECB040E143EA770ADBB296074ECE4021B1D14213BDE538C490/VC_redist.x86.exe'
+Progress: 100% - Completed download of C:\Users\Mito\AppData\Local\Temp\chocolatey\vcredist140\14.36.32532\VC_redist.x86.exe (13.2 MB).
+Download of VC_redist.x86.exe (13.2 MB) completed.
+Hashes match.
+Installing vcredist140-x86...
+vcredist140-x86 has been installed.
+Downloading vcredist140-x64 64 bit
+  from 'https://download.visualstudio.microsoft.com/download/pr/eaab1f82-787d-4fd7-8c73-f782341a0c63/917C37D816488545B70AFFD77D6E486E4DD27E2ECE63F6BBAAF486B178B2B888/VC_redist.x64.exe'
+Progress: 100% - Completed download of C:\Users\Mito\AppData\Local\Temp\chocolatey\vcredist140\14.36.32532\VC_redist.x64.exe (24.18 MB).
+Download of VC_redist.x64.exe (24.18 MB) completed.
+Hashes match.
+Installing vcredist140-x64...
+vcredist140-x64 has been installed.
+  vcredist140 may be able to be automatically uninstalled.
+ The install of vcredist140 was successful.
+  Software installed as 'exe', install location is likely default.
+
+vcredist2015 v14.0.24215.20170201 [Approved]
+vcredist2015 package files install completed. Performing other installation steps.
+ The install of vcredist2015 was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\vcredist2015'
+
+python311 v3.11.3 [Approved]
+python311 package files install completed. Performing other installation steps.
+Installing 64-bit python311...
+python311 has been installed.
+Added C:\ProgramData\chocolatey\bin\python3.11.exe shim pointed to 'c:\python311\python.exe'.
+Python installed to: 'C:\Python311'
+Restricting write permissions to Administrators
+  python311 can be automatically uninstalled.
+Environment Vars (like PATH) have changed. Close/reopen your shell to
+ see the changes (or in powershell/cmd.exe just type `refreshenv`).
+ The install of python311 was successful.
+  Software installed as 'exe', install location is likely default.
+
+python3 v3.11.3 [Approved]
+python3 package files install completed. Performing other installation steps.
+ The install of python3 was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\python3'
+
+python v3.11.3 [Approved]
+python package files install completed. Performing other installation steps.
+ The install of python was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\python'
+Progress: Downloading git.install 2.40.1... 100%
+Progress: Downloading git 2.40.1... 100%
+
+git.install v2.40.1 [Approved]
+git.install package files install completed. Performing other installation steps.
+Using Git LFS
+Installing 64-bit git.install...
+ERROR: Running ["C:\ProgramData\chocolatey\lib\git.install\tools\Git-2.40.1-64-bit.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /NOCANCEL /SP- /LOG /COMPONENTS="icons,assoc,assoc_sh,ext,ext\shellhere,ext\guihere,gitlfs,icons\quicklaunch" ] was not successful. Exit code was '1'. See log for possible error messages.
+The install of git.install was NOT successful.
+Error while running 'C:\ProgramData\chocolatey\lib\git.install\tools\chocolateyInstall.ps1'.
+ See log for details.
+
+git v2.40.1 [Approved]
+git package files install completed. Performing other installation steps.
+ The install of git was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\git'
+Progress: Downloading dtc-msys2 1.5.1... 100%
+
+dtc-msys2 v1.5.1 [Approved]
+dtc-msys2 package files install completed. Performing other installation steps.
+Getting x64 bit yaml .pkg.tar.xz
+Getting x64 bit libs .pkg.tar.xz
+Getting x64 bit core .pkg.tar.xz
+Getting x64 bit dtc .pkg.tar.xz
+Extracting C:\ProgramData\chocolatey\lib\dtc-msys2\tools\libyaml-0.2.4-1-x86_64.pkg.tar.xz to C:\ProgramData\chocolatey\lib\dtc-msys2\tools...
+C:\ProgramData\chocolatey\lib\dtc-msys2\tools
+Extracting C:\ProgramData\chocolatey\lib\dtc-msys2\tools\gcc-libs-9.3.0-1-x86_64.pkg.tar.xz to C:\ProgramData\chocolatey\lib\dtc-msys2\tools...
+C:\ProgramData\chocolatey\lib\dtc-msys2\tools
+Extracting C:\ProgramData\chocolatey\lib\dtc-msys2\tools\msys2-runtime-3.1.7-2-x86_64.pkg.tar.xz to C:\ProgramData\chocolatey\lib\dtc-msys2\tools...
+C:\ProgramData\chocolatey\lib\dtc-msys2\tools
+Extracting C:\ProgramData\chocolatey\lib\dtc-msys2\tools\dtc-1.5.1-2-x86_64.pkg.tar.xz to C:\ProgramData\chocolatey\lib\dtc-msys2\tools...
+C:\ProgramData\chocolatey\lib\dtc-msys2\tools
+Getting x64 bit libs .pkg.tar
+Getting x64 bit libs .pkg.tar
+Getting x64 bit core .pkg.tar
+Getting x64 bit dtc .pkg.tar
+Extracting C:\ProgramData\chocolatey\lib\dtc-msys2\tools\dtc-1.5.1-2-x86_64.pkg.tar to C:\ProgramData\chocolatey\lib\dtc-msys2\tools...
+C:\ProgramData\chocolatey\lib\dtc-msys2\tools
+Extracting C:\ProgramData\chocolatey\lib\dtc-msys2\tools\gcc-libs-9.3.0-1-x86_64.pkg.tar to C:\ProgramData\chocolatey\lib\dtc-msys2\tools...
+C:\ProgramData\chocolatey\lib\dtc-msys2\tools
+Extracting C:\ProgramData\chocolatey\lib\dtc-msys2\tools\msys2-runtime-3.1.7-2-x86_64.pkg.tar to C:\ProgramData\chocolatey\lib\dtc-msys2\tools...
+C:\ProgramData\chocolatey\lib\dtc-msys2\tools
+Extracting C:\ProgramData\chocolatey\lib\dtc-msys2\tools\libyaml-0.2.4-1-x86_64.pkg.tar to C:\ProgramData\chocolatey\lib\dtc-msys2\tools...
+C:\ProgramData\chocolatey\lib\dtc-msys2\tools
+ ShimGen has successfully created a shim for convert-dtsv0.exe
+ ShimGen has successfully created a shim for cygpath.exe
+ ShimGen has successfully created a shim for dtc.exe
+ ShimGen has successfully created a shim for fdtdump.exe
+ ShimGen has successfully created a shim for fdtget.exe
+ ShimGen has successfully created a shim for fdtoverlay.exe
+ ShimGen has successfully created a shim for fdtput.exe
+ The install of dtc-msys2 was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\dtc-msys2\tools'
+Progress: Downloading Wget 1.21.4... 100%
+
+Wget v1.21.4 [Approved]
+wget package files install completed. Performing other installation steps.
+Getting x64 bit zip
+Extracting C:\ProgramData\chocolatey\lib\Wget\tools\wget-1.21.4-win64_x64.zip to C:\ProgramData\chocolatey\lib\Wget\tools...
+C:\ProgramData\chocolatey\lib\Wget\tools
+ ShimGen has successfully created a shim for wget.exe
+ The install of wget was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\Wget\tools'
+Progress: Downloading 7zip.install 22.1... 100%
+Progress: Downloading 7zip 22.1... 100%
+
+7zip.install v22.1 [Approved]
+7zip.install package files install completed. Performing other installation steps.
+Installing 64 bit version
+Installing 7zip.install...
+7zip.install has been installed.
+7zip installed to 'C:\Program Files\7-Zip'
+Added C:\ProgramData\chocolatey\bin\7z.exe shim pointed to 'c:\program files\7-zip\7z.exe'.
+  7zip.install can be automatically uninstalled.
+ The install of 7zip.install was successful.
+  Software installed to 'C:\Program Files\7-Zip\'
+
+7zip v22.1 [Approved]
+7zip package files install completed. Performing other installation steps.
+ The install of 7zip was successful.
+  Software installed to 'C:\ProgramData\chocolatey\lib\7zip'
+
+Chocolatey installed 20/21 packages. 1 packages failed.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+Installed:
+ - kb3033929 v1.0.5
+ - python3 v3.11.3
+ - 7zip v22.1
+ - chocolatey-windowsupdate.extension v1.0.5
+ - ninja v1.11.1
+ - vcredist140 v14.36.32532
+ - kb2999226 v1.0.20181019
+ - git v2.40.1
+ - wget v1.21.4
+ - dtc-msys2 v1.5.1
+ - kb2919355 v1.0.20160915
+ - chocolatey-core.extension v1.4.0
+ - python311 v3.11.3
+ - kb2919442 v1.0.20160915
+ - 7zip.install v22.1
+ - vcredist2015 v14.0.24215.20170201
+ - gperf v3.1
+ - chocolatey-compatibility.extension v1.0.0
+ - kb3035131 v1.0.3
+ - python v3.11.3
+
+Packages requiring reboot:
+ - vcredist140 (exit code 3010)
+
+The recent package changes indicate a reboot is necessary.
+ Please reboot at your earliest convenience.
+
+Failures
+ - git.install (exited 1) - Error while running 'C:\ProgramData\chocolatey\lib\git.install\tools\chocolateyInstall.ps1'.
+ See log for details.
+PS C:\WINDOWS\system32> git install
+git: 'install' is not a git command. See 'git --help'.
+
+The most similar command is
+        instaweb
+PS C:\WINDOWS\system32> git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+PS C:\WINDOWS\system32>
+
+
+PS C:\WINDOWS\system32> choco list -lo
+Chocolatey v1.4.0
+7zip 22.1
+7zip.install 22.1
+chocolatey 1.4.0
+chocolatey-compatibility.extension 1.0.0
+chocolatey-core.extension 1.4.0
+chocolatey-windowsupdate.extension 1.0.5
+cmake 3.26.4
+cmake.install 3.26.4
+dtc-msys2 1.5.1
+git 2.40.1
+gperf 3.1
+KB2919355 1.0.20160915
+KB2919442 1.0.20160915
+KB2999226 1.0.20181019
+KB3033929 1.0.5
+KB3035131 1.0.3
+ninja 1.11.1
+python 3.11.3
+python3 3.11.3
+python311 3.11.3
+vcredist140 14.36.32532
+vcredist2015 14.0.24215.20170201
+Wget 1.21.4
+23 packages installed.
+PS C:\WINDOWS\system32>
+

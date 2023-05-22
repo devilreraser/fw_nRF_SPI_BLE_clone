@@ -1,0 +1,39 @@
+C:\Users\Mito>pip3 install west
+Collecting west
+  Downloading west-1.0.0-py3-none-any.whl (87 kB)
+     |████████████████████████████████| 87 kB 1.2 MB/s
+Collecting PyYAML>=5.1
+  Using cached PyYAML-6.0-cp38-cp38-win_amd64.whl (155 kB)
+Requirement already satisfied: setuptools in c:\program files\windowsapps\pythonsoftwarefoundation.python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\site-packages (from west) (56.0.0)
+Collecting packaging
+  Downloading packaging-23.1-py3-none-any.whl (48 kB)
+     |████████████████████████████████| 48 kB 1.4 MB/s
+Collecting colorama
+  Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting pykwalify
+  Downloading pykwalify-1.8.0-py2.py3-none-any.whl (24 kB)
+Collecting python-dateutil>=2.8.0
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     |████████████████████████████████| 247 kB 6.4 MB/s
+Collecting ruamel.yaml>=0.16.0
+  Downloading ruamel.yaml-0.17.26-py3-none-any.whl (109 kB)
+     |████████████████████████████████| 109 kB 3.3 MB/s
+Collecting docopt>=0.6.2
+  Downloading docopt-0.6.2.tar.gz (25 kB)
+Collecting six>=1.5
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting ruamel.yaml.clib>=0.2.7
+  Downloading ruamel.yaml.clib-0.2.7-cp38-cp38-win_amd64.whl (118 kB)
+     |████████████████████████████████| 118 kB 6.4 MB/s
+Using legacy 'setup.py install' for docopt, since package 'wheel' is not installed.
+Installing collected packages: six, ruamel.yaml.clib, ruamel.yaml, python-dateutil, docopt, PyYAML, pykwalify, packaging, colorama, west
+    Running setup.py install for docopt ... done
+  WARNING: The script pykwalify.exe is installed in 'C:\Users\Mito\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script west.exe is installed in 'C:\Users\Mito\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed PyYAML-6.0 colorama-0.4.6 docopt-0.6.2 packaging-23.1 pykwalify-1.8.0 python-dateutil-2.8.2 ruamel.yaml-0.17.26 ruamel.yaml.clib-0.2.7 six-1.16.0 west-1.0.0
+WARNING: You are using pip version 21.1.1; however, version 23.1.2 is available.
+You should consider upgrading via the 'C:\Users\Mito\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\Mito>
